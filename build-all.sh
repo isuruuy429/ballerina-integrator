@@ -23,3 +23,4 @@ function ctrl_c() {
 }
 
 pwd
+git branch
