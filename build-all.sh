@@ -14,4 +14,12 @@
 #  See the License for the specific language governing permissions and
 #  limitations under the License.
 
+trap ctrl_c INT
+set -e
+
+function ctrl_c() {
+    echo "cancelling build"
+    exit 2;
+}
+
 pwd
