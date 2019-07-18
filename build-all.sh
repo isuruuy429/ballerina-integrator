@@ -23,4 +23,9 @@ function ctrl_c() {
 }
 
 pwd
-git branch
+wget https://product-dist.ballerina.io/downloads/0.991.0/ballerina-linux-installer-x64-0.991.0.deb
+sudo dpkg -i ballerina-linux-installer-x64-0.991.0.deb
+
+cd /home/travis/build/isuruuy429/ballerina-integrator/examples/integration-tutorials
+ballerina init
+ballerina test
