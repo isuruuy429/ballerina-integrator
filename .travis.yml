@@ -12,10 +12,20 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-language: java
+language: minimal
 
-cache:
-  directories:
-  - $HOME/.m2
+# env:
+  # DOCKER_BUILDKIT=1
 
-  script: "./build"
+services:
+  - docker
+
+before_install:
+  - docker --version
+
+addons:
+  apt:
+    packages:
+      - docker-ce
+
+script: "./build"
