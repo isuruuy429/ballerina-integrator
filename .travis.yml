@@ -28,4 +28,4 @@ addons:
     packages:
       - docker-ce
 
-script: "./build"
+script: "./build-all.sh"
