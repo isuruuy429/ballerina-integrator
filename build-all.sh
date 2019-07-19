@@ -23,17 +23,9 @@ function ctrl_c() {
 }
 
 pwd
-sudo apt-get update
-sudo apt-get install unzip
 #wget https://product-dist.ballerina.io/downloads/0.991.0/ballerina-linux-installer-x64-0.991.0.deb
-cd /usr/lib
-sudo mkdir ballerina
-cd ballerina
-wget http://10.100.5.136:8000/ballerina-0.991.0.zip
-echo "downloaded *************"
-ls
-sudo unzip ballerina-0.991.0.zip
-ls
+wget https://product-dist.ballerina.io/nightly/0.992.0-m2-SNAPSHOT/ballerina-linux-installer-x64-0.992.0-m2-SNAPSHOT.deb
+sudo dpkg -i ballerina-linux-installer-x64-0.992.0-m2-SNAPSHOT.deb
 
 #sudo dpkg -i ballerina-linux-installer-x64-0.991.0.deb
 
