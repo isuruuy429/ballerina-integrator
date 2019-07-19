@@ -26,6 +26,17 @@ pwd
 wget https://product-dist.ballerina.io/downloads/0.991.0/ballerina-linux-installer-x64-0.991.0.deb
 sudo dpkg -i ballerina-linux-installer-x64-0.991.0.deb
 
+cd /home/travis/build/isuruuy429/ballerina-integrator/examples/guides/services/healthcare-service
+ballerina init
+ballerina build --skiptests healthcare
+ballerina install --no-build healthcare
+
+ballerina build --skiptests util
+ballerina install --no-build util
+
+ballerina build --skiptests daos
+ballerina install --no-build daos
+
 cd /home/travis/build/isuruuy429/ballerina-integrator/examples/integration-tutorials
 ballerina init
 ballerina test
