@@ -23,13 +23,19 @@ function ctrl_c() {
 }
 
 pwd
+sudo apt-get update
+sudo apt-get install unzip
 #wget https://product-dist.ballerina.io/downloads/0.991.0/ballerina-linux-installer-x64-0.991.0.deb
 wget https://drive.google.com/a/wso2.com/uc?id=1nPDbvnxum7CYPr94-O4N4w1XfrXK2rvh&export=download
-sudo cd /usr/lib
+pwd
+ls
+cd /usr/lib
 sudo mkdir ballerina
 pwd
 sudo cp /home/travis/build/isuruuy429/ballerina-integrator/ballerina-0.991.0.zip /usr/lib/ballerina
-sudo dpkg -i ballerina-linux-installer-x64-0.991.0.deb
+cd /usr/lib/ballerina
+sudo unzip ballerina-0.991.0.zip
+#sudo dpkg -i ballerina-linux-installer-x64-0.991.0.deb
 
 cd /home/travis/build/isuruuy429/ballerina-integrator/examples/guides/services/healthcare-service
 ballerina init
