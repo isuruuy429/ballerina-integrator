@@ -22,6 +22,7 @@ services:
 
 before_install:
   - docker --version
+  - sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 762E3157
 
 addons:
   apt:
