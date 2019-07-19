@@ -29,7 +29,7 @@ sudo apt-get install unzip
 cd /usr/lib
 sudo mkdir ballerina
 cd ballerina
-wget https://drive.google.com/a/wso2.com/uc?id=1nPDbvnxum7CYPr94-O4N4w1XfrXK2rvh&export=download
+wget https://drive.google.com/a/wso2.com/uc?export=download&confirm=W7ZO&id=1nPDbvnxum7CYPr94-O4N4w1XfrXK2rvh
 echo "downloaded *************"
 ls
 sudo unzip ballerina-0.991.0.zip
