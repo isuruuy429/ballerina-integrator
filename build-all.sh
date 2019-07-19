@@ -30,6 +30,8 @@ cd /usr/lib
 sudo mkdir ballerina
 cd ballerina
 wget https://drive.google.com/a/wso2.com/uc?id=1nPDbvnxum7CYPr94-O4N4w1XfrXK2rvh&export=download
+echo "downloaded *************"
+ls
 sudo unzip ballerina-0.991.0.zip
 ls
 
