@@ -17,7 +17,6 @@ language: java
 cache:
   directories:
   - "$HOME/.m2"
-  - "$HOME/apache-maven-3.6.1"
 
 # env:
   # DOCKER_BUILDKIT=1
@@ -26,8 +25,6 @@ services:
   - docker
 
 before_install:
-  - export M2_HOME=$HOME/apache-maven-3.6.1
-
   - docker --version
   - sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 762E3157
 
