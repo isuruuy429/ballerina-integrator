@@ -27,6 +27,9 @@ pwd
 wget https://product-dist.ballerina.io/dev/1.0.0-alpha3/ballerina-linux-installer-x64-1.0.0-alpha3.deb
 sudo dpkg -i ballerina-linux-installer-x64-1.0.0-alpha3.deb
 
+wget apache-maven-3.6.1-src.tar.gz
+tar xzvf apache-maven-3.6.1-src.tar.gz
+
 cd /home/travis/build/isuruuy429/ballerina-integrator
 mvn clean install
 
