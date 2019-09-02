@@ -24,22 +24,23 @@ function ctrl_c() {
 
 pwd
 #wget https://product-dist.ballerina.io/downloads/0.991.0/ballerina-linux-installer-x64-0.991.0.deb
-wget https://product-dist.ballerina.io/nightly/0.992.0-m2-SNAPSHOT/ballerina-linux-installer-x64-0.992.0-m2-SNAPSHOT.deb
-sudo dpkg -i ballerina-linux-installer-x64-0.992.0-m2-SNAPSHOT.deb
+wget https://product-dist.ballerina.io/dev/1.0.0-alpha3/ballerina-linux-installer-x64-1.0.0-alpha3.deb
+sudo dpkg -i ballerina-linux-installer-x64-1.0.0-alpha3.deb
 
-#sudo dpkg -i ballerina-linux-installer-x64-0.991.0.deb
+cd /home/travis/build/isuruuy429/ballerina-integrator
+mvn clean install
 
-cd /home/travis/build/isuruuy429/ballerina-integrator/examples/guides/services/healthcare-service
-ballerina init
-ballerina build --skiptests healthcare
-ballerina install --no-build healthcare
+# cd /home/travis/build/isuruuy429/ballerina-integrator/examples/guides/services/healthcare-service
+# ballerina init
+# ballerina build --skiptests healthcare
+# ballerina install --no-build healthcare
 
-ballerina build --skiptests util
-ballerina install --no-build util
+# ballerina build --skiptests util
+# ballerina install --no-build util
 
-ballerina build --skiptests daos
-ballerina install --no-build daos
+# ballerina build --skiptests daos
+# ballerina install --no-build daos
 
-cd /home/travis/build/isuruuy429/ballerina-integrator/examples/integration-tutorials
-ballerina init
-ballerina test
+# cd /home/travis/build/isuruuy429/ballerina-integrator/examples/integration-tutorials
+# ballerina init
+# ballerina test
