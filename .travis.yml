@@ -12,11 +12,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-language: minimal
+language: java
 
 cache:
   directories:
-  - "$HOME/.m2/repository"
+  - "$HOME/.m2"
   - "$HOME/apache-maven-3.6.1"
 
 # env:
@@ -27,8 +27,6 @@ services:
 
 before_install:
   - export M2_HOME=$HOME/apache-maven-3.6.1
-  - if [ ! -d $M2_HOME/bin ]; then https://www-eu.apache.org/dist/maven/maven-3/3.6.1/binaries/apache-maven-3.6.1-bin.tar.gz | tar zxf - -C $HOME; fi
-  - export PATH=$M2_HOME/bin:$PATH
 
   - docker --version
   - sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 762E3157
