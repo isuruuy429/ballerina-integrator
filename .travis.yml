@@ -17,17 +17,18 @@ language: java
 jdk:
   - oraclejdk8
 
-addons:
-  apt:
-    packages:
-      - oracle-java8-installer
-
 cache:
   directories:
   - "$HOME/.m2"
 
 before_install:
+  - sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 762E3157
   - wget https://product-dist.ballerina.io/dev/1.0.0-alpha3/ballerina-linux-installer-x64-1.0.0-alpha3.deb
   - sudo dpkg -i ballerina-linux-installer-x64-1.0.0-alpha3.deb
+
+addons:
+  apt:
+    packages:
+      - oracle-java8-installer
 
 script: mvn clean install
