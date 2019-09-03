@@ -19,9 +19,7 @@ cache:
   - "$HOME/.m2"
 
 before_install:
-  - docker --version
   - wget https://product-dist.ballerina.io/dev/1.0.0-alpha3/ballerina-linux-installer-x64-1.0.0-alpha3.deb
   - sudo dpkg -i ballerina-linux-installer-x64-1.0.0-alpha3.deb
-  - sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 762E3157
 
 script: mvn clean install
