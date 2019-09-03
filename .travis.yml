@@ -25,7 +25,7 @@ cache:
 
 before_install:
   - sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 762E3157
-  - wget https://product-dist.ballerina.io/dev/1.0.0-alpha3/ballerina-linux-installer-x64-1.0.0-alpha3.deb
+  - wget http://ballerina-distributions.private.wso2.com/2019-09-03/1.0.0-beta/ballerina-linux-installer-x64-1.0.0-beta.deb
   - sudo dpkg -i ballerina-linux-installer-x64-1.0.0-alpha3.deb
 
 addons:
