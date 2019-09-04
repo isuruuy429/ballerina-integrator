@@ -39,7 +39,7 @@ function testReserveAppointment(json dataset, json resultSet) {
 
         if (responsePayload is json) {
             test:assertEquals(response.statusCode, expectedStatusCode, msg = "Status Code mismatch!");
-            test:assertEquals(responsePayload, resultSet, msg = "Expected payload is different than the actual");
+            test:assertEquals(responsePayload, resultSett, msg = "Expected payload is different than the actual");
         } else {
             test:assertFail(msg = "Test Failed!, Invalid Payload");
         }
